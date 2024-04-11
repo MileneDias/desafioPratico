@@ -51,13 +51,8 @@ export default function TasksCreate() {
     async (submitData: any) => {
       try {
         showLoading()
-        // @ts-ignore
-        console.log(submitData)
         await TasksService.create(submitData)
         reset()
-        // @ts-ignore
-        // setData({ ...data, components: [...data.components, newComponent] })
-        console.log('Salvou')
         showSuccess(t('alert.attention'), t('task.createdSuccessfully'))
       } catch (err) {
         showError(t('alert.attention'), String(err))

@@ -104,10 +104,7 @@ export default function TasksList() {
           if (index === 1) {
              try {
               showLoading()
-              // @ts-ignore
               const newComponent = await TasksService.delete(registerId)
-              // @ts-ignore
-              console.log('Salvou')
               showSuccess(t('alert.attention'), t('task.createdSuccessfully'))
             } catch (err) {
               showError(t('alert.attention'), String(err))

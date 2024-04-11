@@ -1,0 +1,37 @@
+### Extensões VSCode
+
+-   ESLint
+-   Prettier
+-   vscode-styled-components
+-   Code Spell Checker
+-   Brazilian Portuguese - Code Spell Checker
+-   Thunder Client - Para testes do back-end
+
+### Como utilizar Thunder Cliente:
+
+-   Exemplo de rota POST:
+    http://localhost:3000/task
+-   Exemplo JSON:
+    {
+        "title": "Academia"
+        "description": "Realizar treino aeróbico",
+        "owner": "Milene",
+        "date": "11/04/2024 04:39:27",
+        "status": "Concluído",
+    }
+
+### Criar Banco de Dados
+
+-   O banco de dados se encontra hospedado em nuvem, a conexão ocorre pelo seguinte link:
+    "mongodb+srv://milenediasdasilva2002:18092002@cluster0.3udpoyp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+-   Não é necessário baixar nada em sua máquina.
+-   Apenas rodar os comandos em um terminal Bash no back-end:
+    `npm install`
+    `npm run dev`
+
+
+### [WEB] Iniciar front-end
+
+-   Dentro da pasta Web apenas rodar comandos:
+    `npm install`
+    `npm run dev`

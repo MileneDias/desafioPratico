@@ -17,8 +17,6 @@ interface CustomRequest extends Request {
 const validId = (req: any, res: Response, next: NextFunction) => {
   try {
     const id = req.params.id;
-    console.log("AQUIII",req.params);
-    
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).send({ message: "ID inválido :(" });
@@ -50,46 +48,3 @@ const validTask = async (req: any, res: Response, next: NextFunction) => {
 };
 
 export { validId, validTask };
-
-
-/* const taskService = require("../services/task.service");
-const mongoose = require("mongoose");
-
-const validId = (req, res, next) => {
-  try {
-    const id = req.params.id;
-
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      return res.status(400).send({ message: "ID inválido :(" });
-    }
-
-    next();
-  } catch (err: any) {
-    res.status(500).send({ message: err.message });
-  }
-};
-
-const validTask = async (req, res, next) => {
-  try {
-    const id = req.params.id;
-
-    const task = await taskService.findByIdService(id);
-
-    if (!task) {
-      return res.status(400).send({ message: "Tarefa não encontrada :(" });
-    }
-
-    req.id = id;
-    req.task = task;
-
-    next();
-  } catch (err: any) {
-    res.status(500).send({ message: err.message });
-  }
-};
-
-module.exports = {
-  validId,
-  validTask,
-};
- */
