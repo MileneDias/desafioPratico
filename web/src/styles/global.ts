@@ -84,7 +84,7 @@ export default createGlobalStyle`
     }
 
     .modal-overlay {
-      background: ${theme.colors.black};
+      background: ${theme.colors.black30};
       position: fixed;
       top: 0;
       bottom: 0;
@@ -100,7 +100,7 @@ export default createGlobalStyle`
       width: 100%;
       min-height: 30rem;
       max-width: 100rem;
-      background: ${theme.colors.gradients.modal};
+      background: ${theme.colors.white};
       padding: 8rem ${theme.spacings.medium};
       position: relative;
       border-radius: ${theme.border.radius};
@@ -150,7 +150,7 @@ export default createGlobalStyle`
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: ${theme.colors.primaryBlue};
+      background-color: ${theme.colors.white};
       transition: ${theme.transition.medium};
       border-radius: ${theme.border.radius};
     }

@@ -17,6 +17,8 @@ interface CustomRequest extends Request {
 const validId = (req: any, res: Response, next: NextFunction) => {
   try {
     const id = req.params.id;
+    console.log("AQUIII",req.params);
+    
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(400).send({ message: "ID inválido :(" });

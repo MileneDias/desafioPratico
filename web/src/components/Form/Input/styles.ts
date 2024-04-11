@@ -142,7 +142,7 @@ export const Wrapper = styled.div<{ isError: boolean }>`
     }
 
     .react-datepicker__day--selected {
-      background-color: ${theme.colors.primaryBlue};
+      background-color: ${theme.colors.white};
     }
 
     .react-datepicker__week {

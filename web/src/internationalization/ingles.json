@@ -14,11 +14,22 @@
     "owner": "Responsible For the Task",
     "status": "Status",
     "date": "Date",
-    "description": "Description"
+    "description": "Description",
+    "actions": "Actions"
   },
   "placeholder":{
     "titlePlaceholder":"Task Title",
     "ownerPlaceholder":"Task Owner",
     "descriptionPlaceholder":"Task Description"
+  },
+  "alert":{
+    "attention": "Attention",
+    "delete": "Delete Task",
+    "cancel": "Cancel",
+    "deleteTitle": "Task Delete",
+    "deleteMessageRegister": "This is deleting a task, are you sure you want to delete it?",
+    "createdSuccessfully": "Saved successfully",
+    "editSuccessfully": "Saved successfully",
+    "deleteSuccessfully": "Deleted successfully"
   }
 }

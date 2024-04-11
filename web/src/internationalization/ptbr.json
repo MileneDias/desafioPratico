@@ -14,11 +14,22 @@
     "owner": "Responsável pela tarefa",
     "status": "Estado",
     "date": "Data",
-    "description": "Descrição"
+    "description": "Descrição",
+    "actions": "Ações"
   },
   "placeholder":{
     "titlePlaceholder":"Titulo da sua tarefa",
     "ownerPlaceholder":"Responsável pela tarefa",
     "descriptionPlaceholder":"Descrição da sua tarefa"
+  },
+  "alert":{
+    "attention": "Atenção",
+    "delete": "Delete",
+    "cancel": "Cancelar",
+    "deleteTitle": "Deletar Tarefa",
+    "deleteMessageRegister": "Esta deletando uma tarefa, tem certeza que quer deletar?",
+    "createdSuccessfully": "Salvo com sucesso",
+    "editSuccessfully": "Salvo com sucesso",
+    "deleteSuccessfully": "Deletado com sucesso"
   }
 }

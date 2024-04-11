@@ -52,11 +52,11 @@ export default function TasksCreate() {
       try {
         showLoading()
         // @ts-ignore
-        submitData.date = formatToJsonString(submitData.date , locale)
-        const newComponent = await TasksService.create(submitData)
+        console.log(submitData)
+        await TasksService.create(submitData)
         reset()
         // @ts-ignore
-        setData({ ...data, components: [...data.components, newComponent] })
+        // setData({ ...data, components: [...data.components, newComponent] })
         console.log('Salvou')
         showSuccess(t('alert.attention'), t('task.createdSuccessfully'))
       } catch (err) {
@@ -78,8 +78,7 @@ export default function TasksCreate() {
       <CardTitleLine />
       
      <Grid isTabletOrMobile={isTabletOrMobile}>
-        <FormProvider {...methods}
-        >
+        <FormProvider {...methods}>
           <form onSubmit={handleSubmit(onSubmit)}>
              <Form.Flex isTabletOrMobile={isTabletOrMobile}>
             <Form.Input
@@ -127,10 +126,7 @@ export default function TasksCreate() {
          
          </form>
         </FormProvider>
-
-       
-      </Grid>
-    
+      </Grid>    
     </Container>
   )
 }

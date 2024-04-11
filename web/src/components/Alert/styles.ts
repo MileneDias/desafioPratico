@@ -22,7 +22,7 @@ export const Overlay = styled(AlertDialog.Overlay)`
 
 export const Content = styled(AlertDialog.Content)`
   ${({ theme }) => css`
-    background-color: rgba(7, 33, 76);
+    background-color:  ${theme.colors.white};
     border-radius: ${theme.border.radius};
     padding: ${theme.spacings.medium};
 
@@ -76,7 +76,7 @@ export const Title = styled(AlertDialog.Title)`
 export const Text = styled(AlertDialog.Description)`
   ${({ theme }) => css`
     font-weight: ${theme.font.medium};
-    font-size: ${theme.font.sizes.small};
+    font-size: ${theme.font.sizes.medium};
     margin: ${theme.spacings.small};
     text-align: center;
   `}

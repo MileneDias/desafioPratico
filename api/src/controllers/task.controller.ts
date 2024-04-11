@@ -14,7 +14,7 @@ interface CustomRequest extends Request {
   id?: ObjectId;
 }
 
-const create = async (req: Request, res: Response) => {
+const create = async (req: any, res: Response) => {
   try {
     const { title, description, date, owner, status } = req.body;
 
@@ -46,7 +46,7 @@ const create = async (req: Request, res: Response) => {
   }
 };
 
-const findAll = async (_req: Request, res: Response) => {
+const findAll = async (req: any, res: Response) => {
   try {
     const tasks = await findAllService();
 

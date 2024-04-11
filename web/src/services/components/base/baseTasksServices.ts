@@ -2,16 +2,20 @@ import { FilterParams, PagedApiResponse } from '@/@types'
 import { Task } from '@/models/tasks'
 import api from '@/services/api'
 import { getErrorMessage } from '@/utils/apiUtils'
-import { addFilterParams, getPaginationHeader } from '@/utils/paginationUtils'
+import { getPaginationHeader } from '@/utils/paginationUtils'
+
+
+export type ApiResponse<T> = {
+  data: T
+  error: ''
+}
 
 export class BaseComponentService<T> {
-  async list(
-    filter: FilterParams = { page: 1, pageSize: 999999 },
-  ): Promise<PagedApiResponse<T[]>> {
-    try {
-      let url = addFilterParams(filter, 'component')
 
-      const response = await api.get(url)
+  async list(): Promise<PagedApiResponse<T[]>> {
+    try {
+
+      const response = await api.get('/')
 
       if (response.data) {
         const result = getPaginationHeader<T[]>(response)
@@ -26,7 +30,7 @@ export class BaseComponentService<T> {
 
   async create(data: Task): Promise<Task> {
     try {
-      const response = await api.post('component', { ...data })
+      const response = await api.get('http://localhost:3000/task/')
 
       return response.data.data
     } catch (error) {
@@ -36,7 +40,7 @@ export class BaseComponentService<T> {
 
   async delete(id: string) {
     try {
-      const response = await api.delete(`/task/:id=${id}`)
+      const response = await api.delete(`/:id=${id}`)
 
       return response.data.data
     } catch (error) {
@@ -47,7 +51,7 @@ export class BaseComponentService<T> {
   async update(id: string, data: Task) {
     try {
       const response = await api.patch(`/task/:id=${id}`, { ...data })
-      
+
       return response.data.data
     } catch (error) {
       throw getErrorMessage(error)

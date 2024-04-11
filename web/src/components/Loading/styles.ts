@@ -28,7 +28,7 @@ export const Container = styled.div`
 export const Loader = styled.div`
   ${({ theme }) => css`
     border: 12px solid ${theme.colors.lightGray};
-    border-top: 12px solid ${theme.colors.primaryBlue};
+    border-top: 12px solid ${theme.colors.white30};
     border-radius: 50%;
     width: 20rem;
     height: 20rem;
