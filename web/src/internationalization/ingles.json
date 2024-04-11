@@ -1,0 +1,24 @@
+{
+  "header": {
+    "title": "Task Management"
+  },
+  "form": {
+    "title": "Title",
+    "create": "Create your task",
+    "list": "Task list",
+    "save": "Save",
+    "required": "Field is required"
+  },
+  "task": {
+    "title": "Title",
+    "owner": "Responsible For the Task",
+    "status": "Status",
+    "date": "Date",
+    "description": "Description"
+  },
+  "placeholder":{
+    "titlePlaceholder":"Task Title",
+    "ownerPlaceholder":"Task Owner",
+    "descriptionPlaceholder":"Task Description"
+  }
+}

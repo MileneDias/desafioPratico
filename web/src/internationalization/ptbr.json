@@ -1,0 +1,24 @@
+{
+  "header": {
+    "title": "Gestão de Tarefas"
+  },
+  "form": {
+    "title": "Titulo",
+    "create": "Crie sua tarefa",
+    "list": "Lista de tarefas",
+    "save": "Salvar",
+    "required": "É obrigatório informar esse campo"
+  },
+  "task": {
+    "title": "Título",
+    "owner": "Responsável pela tarefa",
+    "status": "Estado",
+    "date": "Data",
+    "description": "Descrição"
+  },
+  "placeholder":{
+    "titlePlaceholder":"Titulo da sua tarefa",
+    "ownerPlaceholder":"Responsável pela tarefa",
+    "descriptionPlaceholder":"Descrição da sua tarefa"
+  }
+}
